@@ -1,0 +1,14 @@
+{
+  "name": "AudioTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "johnny-five": "^2.0.0",
+    "nodemon": "^2.0.7",
+    "play-sound": "^1.1.3"
+  }
+}

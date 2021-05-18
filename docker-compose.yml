@@ -1,0 +1,17 @@
+version: '3'
+services:
+  sanipod_test:
+    build: './'
+    privileged: true
+    container_name: 'sanipod_test'
+    devices:
+      - '/dev/snd:/dev/snd'
+      - '/dev/ttyUSB0:/dev/ttyUSB0'
+    volumes:
+      - './:/home/node/app'
+      - 'node_modules:/home/node/app/node_modules'
+      - /usr/bin/qemu-arm-static:/usr/bin/qemu-arm-static
+    command: sh -c 'yarn start'
+
+volumes:
+  node_modules:
