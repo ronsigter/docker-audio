@@ -5,8 +5,6 @@ RUN apt-get install mpg123 alsa-utils -y
 RUN apt-get install wget -y
 RUN apt-get install make gcc g++ python udev -y
 
-
-# RUN usermod -a -G audio node
 RUN mkdir /home/node/app/ && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 
@@ -15,4 +13,4 @@ RUN yarn install
 
 COPY . .
 
-CMD ["mpg123", "test.mp3"]
+CMD ["yarn", "start"]
